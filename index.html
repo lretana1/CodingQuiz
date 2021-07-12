@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CodingQuiz</title>
+    <link rel="stylesheet" href="assets/style.css">
     <script defer src="Script.js"></script>
 </head>
 <body>
+    <div class="container">
+        <div id="Startpage">
+            <div class="Startpageheader">
+                CodingQuiz!
+            </div>
+            <div class="Welcomtext">
+                Welcome to my coding quiz. Think you have the knowledge to answer all the questions and take your place at the top? You have 60 seconds to answer all the questions. Each question is worth 50 points and the remaining time will be added to your score. Incorrect answers will reduce your remaining time by 10 seconds. Best of luck to ya!
+            </div>
+        </div>
+        <div id="question-container" class="hide">
+            <div class="question">Question</div>
+                <div id="answerbuttons" class="btn-grid">
+                <button class="btn">answer1</button>
+                <button class="btn">answer2</button>
+                <button class="btn">answer3</button>
+                <button class="btn">answer4</button>
+            </div>
+        </div>
+        <div id="controls">
+            <button id="startbtn" class="btn">Start!</button>
+        </div>
+    </div>
     
 </body>
 </html>
