@@ -58,10 +58,8 @@ body.wrong{
 }
 .btn:hover{
     border-color: black;
+    cursor: pointer;
 }
 .hide{
     display:none ;
-}
-#startbtn{
-    
 }
