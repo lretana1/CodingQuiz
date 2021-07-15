@@ -33,7 +33,7 @@ const questions =
             {text:"Node.js",correct:false},
             {text:"CSS",correct:false},
             {text:"HTML",correct:true},
-            {text:"Javascriot",correct:false}
+            {text:"Javascript",correct:false}
         ]
     },
     {
@@ -49,6 +49,24 @@ const questions =
 var currentQuestion = 0;
 var startBtn = document.querySelector("#startbtn");
 var score = 0;
+var title = document.querySelector("#hs-title");
+var restart= document.querySelector("#restart")
+
+restart.onclick= function(){
+    document.querySelector("#Startpage").style.display="block";
+    document.querySelector("#hs-prompt-title").style.display="none"
+    document.querySelector("#restart").style.display="none"
+    document.querySelector(".container").style.display="block"
+}
+
+
+
+title.onclick= function(){
+    document.querySelector("#Startpage").style.display="none";
+    document.querySelector(".container").style.display="none";
+    document.querySelector("#hs-prompt-title").style.display="block"
+    document.querySelector("#restart").style.display="block"
+}
 
 startBtn.onclick = function(){
     document.querySelector("#Startpage").style.display = "none";
@@ -65,6 +83,14 @@ var updateQuestion = function(q){
         }
     }
 };
+var counter=60
+var starttimer= setInterval(function(){
+    console.log(counter);
+    counter--
+    if(counter===0){clearInterval(starttimer)}},1000);
+
+
+
 
 
 document.querySelectorAll('.answer-btn').forEach(function(btn){
@@ -81,6 +107,7 @@ document.querySelectorAll('.answer-btn').forEach(function(btn){
             document.querySelector("#question-container").style.display = "none";
             document.querySelector("#finished-container").style.display = "block";
             document.querySelector("#finished-container").textContent = "Score: " + score;
+           
         }
     };
 });
